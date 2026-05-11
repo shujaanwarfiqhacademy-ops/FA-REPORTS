@@ -31,13 +31,13 @@ import {
 import { motion, AnimatePresence } from "motion/react";
 import { Toaster, toast } from "sonner";
 
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Badge } from "@/components/ui/badge";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Separator } from "@/components/ui/separator";
+import { Button } from "./components/ui/button.tsx";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "./components/ui/card.tsx";
+import { Input } from "./components/ui/input.tsx";
+import { Badge } from "./components/ui/badge.tsx";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "./components/ui/tabs.tsx";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./components/ui/select.tsx";
+import { Separator } from "./components/ui/separator.tsx";
 
 import { Transaction, Campus, PLReport, AppState } from "./types";
 import { generatePLReport, allocateCampuses } from "./lib/accounting";

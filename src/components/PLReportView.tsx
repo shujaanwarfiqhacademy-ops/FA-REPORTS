@@ -1,8 +1,8 @@
 import React, { useState, useMemo } from "react";
 import { Download, Building2, Calendar, Printer, FileSpreadsheet, FileText as FilePdf, ChevronRight, ChevronDown, ListTree, ListCollapse } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Button } from "./ui/button.tsx";
+import { Card, CardContent } from "./ui/card.tsx";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select.tsx";
 import { AppState, Campus, PLReport, PLSection } from "../types";
 import { generatePLReport } from "../lib/accounting";
 import { jsPDF } from "jspdf";

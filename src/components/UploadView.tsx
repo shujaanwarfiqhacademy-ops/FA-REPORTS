@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Upload, FileType, Check, AlertCircle, Loader2 } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { Button } from "./ui/button.tsx";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "./ui/card.tsx";
+import { Input } from "./ui/input.tsx";
+import { Label } from "./ui/label.tsx";
+import { Alert, AlertDescription, AlertTitle } from "./ui/alert.tsx";
 import { parseExcelFile, mapJsonToTransactions } from "../lib/excel";
 import { detectColumns } from "../lib/gemini";
 import { Transaction, AppState } from "../types";

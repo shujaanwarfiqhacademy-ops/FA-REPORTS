@@ -4,9 +4,9 @@ import {
   XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend, AreaChart, Area
 } from "recharts";
 import { TrendingUp, DollarSign, Building2, ArrowUpRight, ArrowDownRight, Activity, ChevronRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import { Button } from "./ui/button.tsx";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "./ui/card.tsx";
+import { Badge } from "./ui/badge.tsx";
 import { AppState, Campus, TransactionType } from "../types";
 
 interface DashboardViewProps {

@@ -1,9 +1,9 @@
 import React, { useState, useMemo } from "react";
 import { Search, Filter, ArrowUpDown, ChevronDown, Check, X, AlertTriangle, Building2 } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Badge } from "@/components/ui/badge";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { Button } from "./ui/button.tsx";
+import { Input } from "./ui/input.tsx";
+import { Badge } from "./ui/badge.tsx";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "./ui/table.tsx";
 import { 
   DropdownMenu, 
   DropdownMenuContent, 
@@ -11,11 +11,11 @@ import {
   DropdownMenuTrigger,
   DropdownMenuSeparator,
   DropdownMenuLabel
-} from "@/components/ui/dropdown-menu";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+} from "./ui/dropdown-menu.tsx";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select.tsx";
 import { AppState, Campus, Transaction, TransactionType } from "../types";
 
-import { Card } from "@/components/ui/card";
+import { Card } from "./ui/card.tsx";
 
 interface TransactionsViewProps {
   state: AppState;

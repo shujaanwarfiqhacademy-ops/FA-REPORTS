@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { Plus, Trash2, Key, ListFilter, Save, History } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Badge } from "@/components/ui/badge";
-import { Separator } from "@/components/ui/separator";
+import { Button } from "./ui/button.tsx";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "./ui/card.tsx";
+import { Input } from "./ui/input.tsx";
+import { Label } from "./ui/label.tsx";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "./ui/table.tsx";
+import { Badge } from "./ui/badge.tsx";
+import { Separator } from "./ui/separator.tsx";
 import { AppState } from "../types";
 import { toast } from "sonner";
 
