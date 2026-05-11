@@ -1,7 +1,18 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { Campus, TransactionType } from "../types";
 
-const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
+let genAI: GoogleGenAI | null = null;
+
+function getAI() {
+  if (!genAI) {
+    const key = process.env.GEMINI_API_KEY;
+    if (!key) {
+      throw new Error("GEMINI_API_KEY is not defined");
+    }
+    genAI = new GoogleGenAI({ apiKey: key });
+  }
+  return genAI;
+}
 
 export async function detectColumns(sampleData: any[]) {
   const prompt = `Given these sample rows from an Excel file:
@@ -21,6 +32,7 @@ Identify which column index or name corresponds to the following financial field
 Return a JSON object with the mappings.`;
 
   try {
+    const ai = getAI();
     const response = await ai.models.generateContent({
       model: "gemini-3-flash-preview",
       contents: prompt,
@@ -62,6 +74,7 @@ ${JSON.stringify(transactions.map(t => ({ desc: t.description, acc: t.account, b
 Return a JSON array of objects with 'id' (index), 'category', 'subCategory', 'campus' (Main, Johar, Masjid, Maktab, or null).`;
 
   try {
+    const ai = getAI();
     const response = await ai.models.generateContent({
       model: "gemini-3-flash-preview",
       contents: prompt,

@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from "react";
-import { Download, Building2, Calendar, Printer, FileSpreadsheet, FileIcon as FilePdf, ChevronRight, ChevronDown, ListTree, ListCollapse } from "lucide-react";
+import { Download, Building2, Calendar, Printer, FileSpreadsheet, FileText as FilePdf, ChevronRight, ChevronDown, ListTree, ListCollapse } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
