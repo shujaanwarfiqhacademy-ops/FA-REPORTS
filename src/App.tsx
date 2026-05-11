@@ -36,7 +36,6 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { ScrollArea } from "@/components/ui/scroll-area";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Separator } from "@/components/ui/separator";
 
@@ -245,7 +244,7 @@ export default function App() {
         </header>
 
         {/* Viewport content */}
-        <ScrollArea className="flex-1">
+        <div className="flex-1 overflow-y-auto">
           <div className="p-8">
             <AnimatePresence mode="wait">
               <motion.div
@@ -264,7 +263,7 @@ export default function App() {
               </motion.div>
             </AnimatePresence>
           </div>
-        </ScrollArea>
+        </div>
       </main>
     </div>
   );

@@ -5,7 +5,6 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { ScrollArea } from "@/components/ui/scroll-area";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { AppState } from "../types";
@@ -78,7 +77,7 @@ export default function AdminView({ state, onUpdate }: AdminViewProps) {
               </Button>
             </div>
 
-            <ScrollArea className="h-[400px]">
+            <div className="h-[400px] overflow-y-auto">
               <Table>
                 <TableHeader>
                   <TableRow className="hover:bg-transparent">
@@ -113,7 +112,7 @@ export default function AdminView({ state, onUpdate }: AdminViewProps) {
                   )}
                 </TableBody>
               </Table>
-            </ScrollArea>
+            </div>
           </CardContent>
         </Card>
 

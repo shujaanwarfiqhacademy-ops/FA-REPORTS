@@ -13,7 +13,6 @@ import {
   DropdownMenuLabel
 } from "@/components/ui/dropdown-menu";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { ScrollArea } from "@/components/ui/scroll-area";
 import { AppState, Campus, Transaction, TransactionType } from "../types";
 
 import { Card } from "@/components/ui/card";
@@ -109,7 +108,7 @@ export default function TransactionsView({ state, filterCampus, onUpdate }: Tran
 
       {/* Main Container with scrolling */}
       <Card className="flex-1 border-none shadow-2xl bg-white dark:bg-zinc-900 rounded-2xl overflow-hidden flex flex-col border border-slate-100">
-        <ScrollArea className="flex-1 w-full" orientation="both">
+        <div className="flex-1 w-full overflow-auto">
           <Table className="relative min-w-[1000px]">
             <TableHeader className="sticky top-0 z-10 bg-slate-100 dark:bg-zinc-800 shadow-sm">
               <TableRow className="hover:bg-transparent border-none">
@@ -207,7 +206,7 @@ export default function TransactionsView({ state, filterCampus, onUpdate }: Tran
               )}
             </TableBody>
           </Table>
-        </ScrollArea>
+        </div>
       </Card>
       
       <div className="flex justify-between items-center bg-slate-900 text-white p-4 rounded-2xl shadow-xl">
